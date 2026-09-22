@@ -8,7 +8,7 @@ import { axiosInstance } from "@/lib/api/axios";
 import { useSpliceStore } from "@/lib/store/useSpliceStore";
 import { AxiosError } from "axios";
 
-export function SpliceAnalysisPage() {
+export function SpliceModelInfoPage() {
   const {
     results,
     modelType,

@@ -1,66 +1,88 @@
-import React from 'react';
-import HeroSection from '@/components/landingPage/HeroSection';
-import Card from '@/components/landingPage/Card';
-import CollaboratorsAndContributors from '@/components/landingPage/CollaboratorsAndContributors';
-import Navbar from '@/components/Navbar';
-import { NavBanner } from '@/components/NavBanner';
-import Footer from '@/components/landingPage/Footer';
+import React from "react";
+import HeroSection from "@/components/landingPage/HeroSection";
+import Card from "@/components/landingPage/Card";
+import Navbar from "@/components/Navbar";
+import { NavBanner } from "@/components/NavBanner";
+import Footer from "@/components/landingPage/Footer";
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-slate-50">
       <NavBanner />
+
       <HeroSection
-        title="DrCMDs Predictor"
-        tagline="A Novel System for Disease Prediction, Mutated Patterns Discovery, and Drug Candidates Generation to Combat Viral Diseases in the Indian Population."
+        title="BioPredict AI"
+        tagline="An AI-powered platform for biological prediction, genetic analysis, and computational research."
       />
+
       <Navbar />
-      <section className="py-4 bg-gray-100">
-        <div className="container mx-auto p-4 text-center">
-          <h2 className="text-5xl font-bold text-[#123265] mb-8">Our Models</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-items-center max-w-7xl mx-auto">
+
+      <section className="py-12 bg-slate-50">
+        <div className="container mx-auto px-6 text-center">
+          
+          <div className="mb-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600 mb-2">
+              Explore Our Research
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+              Our Models
+            </h2>
+
+            <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+              Explore AI and computational biology models designed for
+              biological analysis, prediction, and research.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-7xl mx-auto">
+
             <Card
-              title="Classification and Mutation Pattern Prediction in SARS-CoV2 using Deep Neural Networks"
-              description="This classifies the SARS-CoV2 variants and predicts the mutation patterns."
+              title="SARS-CoV-2 Classification & Mutation Prediction"
+              description="Classifies SARS-CoV-2 variants and predicts mutation patterns using deep learning techniques."
               imageUrl="/Coronavirus._SARS-CoV-2.png"
               linkUrl="/sarsClassificationMutations"
             />
+
             <Card
               title="MECP2 SNV Pathogenicity Classifier"
-              description="This model is designed to help predict whether a genetic change in the MECP2 gene is likely to cause disease or not. By learning from patterns in existing genetic data, it can identify which mutations are harmful and which are harmless. This helps support genetic research and can assist in understanding conditions linked to MECP2."
+              description="Analyzes genetic changes in the MECP2 gene and predicts whether variants may be associated with disease."
               imageUrl="/T7_RNA_polymerase.jpg"
               linkUrl="/pathogenicityClassification"
             />
+
             <Card
               title="Viral Disease Prediction"
-              description="This model helps identify different viral diseases by analyzing their genetic information. It’s designed not only to be accurate but also to explain how it makes its decisions. By studying the genetic patterns of viruses like HIV, Ebola, SARS, MERS, and COVID-19, the model learns to recognize which virus is which. This can support research, improve understanding of how viruses spread, and contribute to developing better treatments."
+              description="Analyzes viral genetic information to classify different viral diseases and identify biological patterns."
               imageUrl="/viralDiseasePredictionImg.jpg"
               linkUrl="/viralDiseasePrediction"
             />
+
             <Card
-              title="Splice Acceptor and Donor Site Prediction"
-              description="This model is built to identify important regions in genes where RNA splicing happens — known as splice acceptor and donor sites."
+              title="Splice Site Prediction"
+              description="Identifies important regions in genes where RNA splicing occurs, including splice donor and acceptor sites."
               imageUrl="/RNA_splicing_diagram_en.svg.png"
               linkUrl="/spliceSitePrediction"
             />
+
             <Card
-              title="Drug Target Pairs Analysis"
-              description="This model is designed to identify drug-target pairs that are likely to be effective in treating a given disease."
+              title="Drug Target Pair Analysis"
+              description="Analyzes potential drug-target pairs to support computational research into disease treatment."
               imageUrl="/Drug_target.jpg"
               linkUrl="/drugTargetPairsAnalysis"
             />
+
             <Card
-              title="Model 6: coming soon"
-              description="Model for predicting poliovirus mutations."
-              imageUrl="https://cardiff.imgix.net/__data/assets/image/0004/2498467/GettyImages-1253218209.jpg?w=873&h=491&fit=crop&q=60&auto=format"
-              linkUrl="https://example.com/model6-page"
+              title="Poliovirus Mutation Prediction"
+              description="An upcoming model focused on analyzing and predicting poliovirus mutation patterns."
+              imageUrl="/viralDiseasePredictionImg.jpg"
+              linkUrl="/"
             />
+
           </div>
         </div>
       </section>
-      <section id="contributors-section">
-        <CollaboratorsAndContributors />
-      </section>
+
       <Footer />
     </div>
   );

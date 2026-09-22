@@ -50,13 +50,6 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
-            <Link 
-              href="/#contributors-section" scroll={true}
-              className="text-base font-normal text-white hover:text-white relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all hover:after:w-full"
-            >
-              Contributors & Collaborators
-            </Link>
             
             <Link 
               href="/faqs" 
@@ -111,13 +104,6 @@ const Navbar = () => {
               className="block px-3 py-2 text-sm text-white hover:bg-[#1a2f6f] rounded-md"
             >
               SARS-CoV-2 Classification
-            </Link>
-            <Link 
-              href="/#contributors-section"
-              scroll={true}
-              className="text-base font-normal text-white hover:text-white relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all hover:after:w-full"
-            >
-              Contributors & Collaborators
             </Link>
             <Link 
               href="/faqs" 

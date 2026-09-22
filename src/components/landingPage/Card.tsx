@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CardProps {
   title: string;
@@ -9,28 +9,55 @@ interface CardProps {
 
 const Card = ({ title, description, imageUrl, linkUrl }: CardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 w-96 h-120 flex flex-col relative">
-      <img src={imageUrl} alt={title} className="object-cover w-full h-48 mb-4" />
-      <h3 className="text-2xl font-bold text-[#123265] mb-4">{title}</h3>
-      <p className="text-gray-500 text-center mb-4 overflow-hidden text-ellipsis h-24">{description}</p>
-      <a
-        href={linkUrl}
-        className="absolute bottom-4 right-4 text-blue-600 hover:text-blue-800 flex items-center"
-      >
-        Try Model
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="ml-1 w-4 h-4"
-        >
-          <path d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
+    <div className="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden w-full max-w-sm flex flex-col">
+
+      {/* Image */}
+      <div className="relative overflow-hidden">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="object-cover w-full h-52 group-hover:scale-105 transition-transform duration-500"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
+
+      {/* Content */}
+      <div className="p-6 flex flex-col flex-1">
+
+        <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug">
+          {title}
+        </h3>
+
+        <p className="text-sm leading-6 text-slate-600 mb-6 line-clamp-4">
+          {description}
+        </p>
+
+        {/* Button */}
+        <div className="mt-auto">
+          <a
+            href={linkUrl}
+            className="inline-flex items-center gap-2 rounded-lg bg-cyan-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-cyan-700 transition-colors duration-200"
+          >
+            Try Model
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-4 h-4"
+            >
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
     </div>
   );
 };

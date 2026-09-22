@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dr.CMD's Predictor",
-  description: "predictor tool",
+  title: "BioPredict AI",
+  description:
+    "AI-powered biological prediction, genetic analysis, and computational research platform.",
 };
 
 export default function RootLayout({
